@@ -31,3 +31,13 @@
  *
  * @apiSuccess {Number} id         The new Product ID.
  */
+
+/**
+ * @api {delete} /product delete Product
+ * @apiName DeleteProduct
+ * @apiGroup Product
+ *
+ * @apiBody {String} id ID of the product
+ *
+ * @apiSuccess {String} message         Indicate if the process started
+ */
