@@ -20,3 +20,14 @@
  *
  * @apiSuccess {Object} product The new Product.
  */
+
+/**
+ * @api {post} /setProductName Set Product new name
+ * @apiName UpdateProduct
+ * @apiGroup Product
+ *
+ * @apiBody {String} id ID of the product
+ * @apiBody {String} newName=Ball Name of the Product
+ *
+ * @apiSuccess {Number} id         The new Product ID.
+ */
