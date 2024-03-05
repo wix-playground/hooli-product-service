@@ -1,16 +1,34 @@
 /**
+ * @apiDefine AuthorizationHeader
+ *
+ * @apiHeader {String} Authorization access token
+ * @apiHeaderExample {json} Header-Example:
+ *      {
+ *        "Authorization": "SdCl345xxxxxxxxxxxx"
+ *      }
+ */
+
+/**
+ * @apiDefine Forbidden
+ *
+ * @apiError (Error 4xx) Forbidden Unauthorized
+ */
+
+
+/**
  * @api {post} /product Create a new Product
  * @apiName CreateProduct
  * @apiGroup Product
  *
- * @apiHeader {String} Authorization access token
+ * @apiUse AuthorizationHeader
  *
  * @apiBody {String} id ID of the product
  * @apiBody {String} name=Ball Name of the Product
  * @apiBody {number} quantity Quantity currently left in inventory
  * @apiBody {number} price Product price
  *
- * @apiSuccess {Number} id         The new Product ID.
+ * @apiSuccess (Success 200) {Number} id         The new Product ID.
+ * @apiUse Forbidden
  */
 
 /**
@@ -18,11 +36,12 @@
  * @apiName GetProduct
  * @apiGroup Product
  *
- * @apiHeader {String} Authorization access token
+ * @apiUse AuthorizationHeader
  *
  * @apiParam {String} id Product unique ID.
  *
- * @apiSuccess {Object} product The new Product.
+ * @apiSuccess (Success 200) {Object} product The new Product.
+ * @apiUse Forbidden
  */
 
 /**
@@ -30,12 +49,13 @@
  * @apiName UpdateProduct
  * @apiGroup Product
  *
- * @apiHeader {String} Authorization access token
+ * @apiUse AuthorizationHeader
  *
  * @apiBody {String} id ID of the product
  * @apiBody {String} newName=Ball Name of the Product
  *
- * @apiSuccess {Number} id         The new Product ID.
+ * @apiSuccess (Success 200) {Number} id         The new Product ID.
+ * @apiUse Forbidden
  */
 
 /**
@@ -43,9 +63,21 @@
  * @apiName DeleteProduct
  * @apiGroup Product
  *
- * @apiHeader {String} Authorization access token
+ * @apiUse AuthorizationHeader
  *
  * @apiBody {String} id ID of the product
  *
- * @apiSuccess {String} message         Indicate if the process started
+ * @apiSuccess (Success 200) {String} message         Indicate if the process started
+ * @apiUse Forbidden
+ */
+
+/**
+ * @api {get} /listProducts List Product
+ * @apiName ListProduct
+ * @apiGroup Product
+ *
+ * @apiUse AuthorizationHeader
+ *
+ * @apiSuccess (Success 200) {Object[]} products.
+ * @apiUse Forbidden
  */
