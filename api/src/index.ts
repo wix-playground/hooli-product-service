@@ -16,6 +16,8 @@
  * @apiName GetProduct
  * @apiGroup Product
  *
+ * @apiHeader [String] Authorization access token
+ *
  * @apiParam {String} id Product unique ID.
  *
  * @apiSuccess {Object} product The new Product.
