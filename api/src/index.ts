@@ -3,6 +3,8 @@
  * @apiName CreateProduct
  * @apiGroup Product
  *
+ * @apiHeader {String} Authorization access token
+ *
  * @apiBody {String} id ID of the product
  * @apiBody {String} name=Ball Name of the Product
  * @apiBody {number} quantity Quantity currently left in inventory
@@ -16,7 +18,7 @@
  * @apiName GetProduct
  * @apiGroup Product
  *
- * @apiHeader [String] Authorization access token
+ * @apiHeader {String} Authorization access token
  *
  * @apiParam {String} id Product unique ID.
  *
@@ -28,6 +30,8 @@
  * @apiName UpdateProduct
  * @apiGroup Product
  *
+ * @apiHeader {String} Authorization access token
+ *
  * @apiBody {String} id ID of the product
  * @apiBody {String} newName=Ball Name of the Product
  *
@@ -38,6 +42,8 @@
  * @api {delete} /product delete Product
  * @apiName DeleteProduct
  * @apiGroup Product
+ *
+ * @apiHeader {String} Authorization access token
  *
  * @apiBody {String} id ID of the product
  *

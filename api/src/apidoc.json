@@ -4,7 +4,6 @@
   "description": "Documentation for the REST api for Hooli Product Service",
   "title": "Hooli Product Service",
   "url" : "https://www.wix.com/yuvals65/hooli-products/_functions",
-  "sampleUrl": "https://www.wix.com/yuvals65/hooli-products/_functions",
   "order": [
     "Product"
   ],
