@@ -9,7 +9,7 @@
   ],
   "template": {
     "showRequiredLabels": false,
-    "withGenerator": true,
+    "withGenerator": false,
     "aloneDisplay": false
   }
 }
