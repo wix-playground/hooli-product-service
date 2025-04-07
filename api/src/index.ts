@@ -1,10 +1,10 @@
 /**
  * @apiDefine AuthorizationHeader
  *
- * @apiHeader {String} Authorization access token
+ * @apiHeader {String} access_token access token
  * @apiHeaderExample {json} Header-Example:
  *      {
- *        "Authorization": "SdCl345xxxxxxxxxxxx"
+ *        "access_token": "SdCl345xxxxxxxxxxxx"
  *      }
  */
 
